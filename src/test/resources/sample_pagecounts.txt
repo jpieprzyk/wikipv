@@ -1,0 +1,16 @@
+pl article1 1000
+pl article2 100
+pl article3 10
+pl article4 1
+pl.m article1 111
+pl.m article2 11
+pl.m article3 1
+pl.m article4 9
+en article1 1000
+en article2 100
+en article3 10
+en article4 1
+en.m article1 111
+en.m article2 11
+en.m article3 1
+en.m article4 9
