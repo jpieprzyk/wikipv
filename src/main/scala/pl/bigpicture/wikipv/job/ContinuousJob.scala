@@ -3,14 +3,16 @@ package pl.bigpicture.wikipv.job
 import java.io.File
 import java.util.Calendar
 
-import _root_.pl.bigpicture.wikipv.download.StatsFile
+import pl.bigpicture.wikipv.download.{Listings, StatsFile}
 import org.apache.log4j.Logger
 import org.apache.spark.{SparkConf, SparkContext}
 import pl.bigpicture.wikipv.write.JsonWriter
 import pl.bigpicture.wikipv.{HourlyStats, PageCountRow, Settings}
 
 /**
-  * Created by kuba on 19/02/16.
+  * This job is intedend to be started once and periodically check
+  * for new log files on Wikipedia, download them and process.
+  *
   */
 object ContinuousJob {
   val logger = Logger.getLogger(ContinuousJob.getClass)
@@ -56,15 +58,21 @@ object ContinuousJob {
       if (!statsFile.isDefined) {
         logger.info("No hours available to download at this time.")
       } else {
-        logger.info("Processing hour: %s".format(statsFile.get.timestamp))
+        logger.info("Downloading hour: %s".format(statsFile.get.timestamp))
 
         statsFile.get.download
-        
+
         val rdd = sc.textFile(Settings.downloadsPath + File.separator + statsFile.get.fileName).map(line => PageCountRow(line))
         val topPages = HourlyStats.topPages(statsFile.get.timestamp.toInt, Settings.topN, rdd)
 
-        JsonWriter.save(topPages, Settings.outputJsonPath + File.separator + statsFile.get.outputFile)
+        JsonWriter.save(statsFile.get.cal, topPages, Settings.outputJsonPath + File.separator + statsFile.get.outputFile)
+
+        import sys.process._
+
+        "./upload_latest.sh" !
       }
+
+      Listings.invalidate
 
       logger.info("Waiting...")
       Thread.sleep(1000 * 60 * 1)

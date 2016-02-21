@@ -11,9 +11,3 @@ libraryDependencies += "commons-net" % "commons-net" % "3.3"
 
 
 
-mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
-  {
-    case PathList("META-INF", xs @ _*) => MergeStrategy.discard
-    case x => MergeStrategy.first
-  }
-}

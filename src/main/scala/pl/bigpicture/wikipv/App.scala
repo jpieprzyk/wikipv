@@ -24,7 +24,5 @@ object App {
 
     val topPages = HourlyStats.topPages(9999, 10, pageCounts)
 
-    JsonWriter.save(topPages, "output.txt")
-
   }
 }

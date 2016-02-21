@@ -55,7 +55,7 @@ case class StatsFile(cal: Calendar) {
     else false
   }
 
-  def outputFile = "output_%s.json".format(timestamp)
+  def outputFile = "output_%s0000.json".format(timestamp)
 
   def outputExists = {
     val allFiles = new File(Settings.downloadsPath).listFiles()

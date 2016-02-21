@@ -45,7 +45,7 @@ object OneHourJob {
       val rdd = sc.textFile(Settings.downloadsPath + File.separator + file.fileName).map(r => PageCountRow(r))
       val topPages = HourlyStats.topPages(file.timestamp.toInt, 10, rdd)
 
-      JsonWriter.save(topPages, Settings.outputJsonPath + File.separator + "output_%s.json".format(file.timestamp))
+      JsonWriter.save(file.cal, topPages, Settings.outputJsonPath + File.separator + "output_%s.json".format(file.timestamp))
 
     } else {
       logger.info("No file to process for hour %s".format(ts))

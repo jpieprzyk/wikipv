@@ -1,16 +1,26 @@
 package pl.bigpicture.wikipv.write
 
 import java.io.{File, PrintWriter}
+import java.util.Calendar
 
 import org.apache.spark.rdd.RDD
 import pl.bigpicture.wikipv.PageStat
 
 /**
-  * Created by kuba on 14/02/16.
+  * Writes rdd results as Json to a file.
+  *
   */
 object JsonWriter {
 
-  def save(rdd: RDD[PageStat], fileName: String): Unit = {
+  def getTimestamp(cal: Calendar) = "%04d-%02d-%02d %02d:00".format(
+    cal.get(Calendar.YEAR),
+    cal.get(Calendar.MONTH) +1,
+    cal.get(Calendar.DAY_OF_MONTH),
+    cal.get(Calendar.HOUR_OF_DAY)
+  )
+
+
+  def save(cal: Calendar, rdd: RDD[PageStat], fileName: String): Unit = {
 
     val langs = rdd.map(ps => ps.lang).distinct()
       .collect.map(lang => "\"%s\" ".format(lang)).mkString(",")
@@ -35,11 +45,10 @@ object JsonWriter {
       """
         |{
         |%s
-        |%s
+        |%s,
+        |"lastUpdated": "%s"
         |}
-      """.stripMargin.format(langHeader, content)
-
-    println(result)
+      """.stripMargin.format(langHeader, content, getTimestamp(cal))
 
     val pw = new PrintWriter(new File(fileName))
     pw.print(result)

@@ -80,7 +80,11 @@ case class PageCountRow(row: String) {
 
 
   def isValidPage = {
-    articleStr != "Main_Page" && !article.contains(":")
+    ! (
+        articleStr == "Main_Page"
+      || articleStr.contains(":")
+      || articleStr == "index.html"
+      )
   }
 
 }

@@ -23,5 +23,6 @@ object Settings {
   def ftpUser = prop.getProperty("ftp.user")
   def ftpPassword = prop.getProperty("ftp.password")
 
+  def keepDownloadDays = prop.getProperty("download.keep.days").toInt
 
 }
