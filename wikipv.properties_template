@@ -2,3 +2,4 @@ download.dir=/Users/kuba/Downloads
 output.dir=/Users/kuba
 top.n=50
 check.hours.ago=12
+download.keep.days=2

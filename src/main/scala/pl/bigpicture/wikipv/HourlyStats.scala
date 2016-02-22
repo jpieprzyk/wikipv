@@ -3,7 +3,7 @@ package pl.bigpicture.wikipv
 import org.apache.spark.rdd.RDD
 
 /**
-  * Created by kuba on 11/02/16.
+  * Get top pages for log file from 1 hour.
   */
 object HourlyStats {
 

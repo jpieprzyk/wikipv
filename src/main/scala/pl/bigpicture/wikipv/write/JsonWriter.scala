@@ -7,7 +7,7 @@ import org.apache.spark.rdd.RDD
 import pl.bigpicture.wikipv.PageStat
 
 /**
-  * Writes rdd results as Json to a file.
+  * Writes rdd results as Json to a local file.
   *
   */
 object JsonWriter {

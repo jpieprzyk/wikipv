@@ -21,11 +21,11 @@ class PageCountRowTest extends FunSuite {
   }
 
   test("is wikipedia") {
-    assert(PageCountRow("pl.m Main_Page 4050 234234").isWikipedia == true)
-    assert(PageCountRow("pl Main_Page 4050 234234").isWikipedia == true)
-    assert(PageCountRow("commons.m Main_Page 4050 234234").isWikipedia == false)
-    assert(PageCountRow("en.q Main_Page 4050 234234").isWikipedia == false)
-    assert(PageCountRow("en.m.voy Main_Page 4050 234234").isWikipedia == false)
+    assert(PageCountRow("pl.m Main_Page 4050 234234").isWikipedia)
+    assert(PageCountRow("pl Main_Page 4050 234234").isWikipedia)
+    assert(!PageCountRow("commons.m Main_Page 4050 234234").isWikipedia)
+    assert(!PageCountRow("en.q Main_Page 4050 234234").isWikipedia)
+    assert(!PageCountRow("en.m.voy Main_Page 4050 234234").isWikipedia)
   }
 
 }

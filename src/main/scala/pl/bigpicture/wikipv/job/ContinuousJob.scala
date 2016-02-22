@@ -55,7 +55,7 @@ object ContinuousJob {
         .headOption
 
 
-      if (!statsFile.isDefined) {
+      if (statsFile.isEmpty) {
         logger.info("No hours available to download at this time.")
       } else {
         logger.info("Downloading hour: %s".format(statsFile.get.timestamp))
@@ -73,6 +73,8 @@ object ContinuousJob {
       }
 
       Listings.invalidate
+      logger.info("Do the housekeeping")
+      HousekeepingJob.execute
 
       logger.info("Waiting...")
       Thread.sleep(1000 * 60 * 1)

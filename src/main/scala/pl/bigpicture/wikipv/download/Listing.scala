@@ -32,8 +32,8 @@ object Listings {
   /**
     * Get listings for given year-month calendar
     *
-    * @param cal
-    * @return
+    * @param cal timestamp for which the lisiting shoudl be downloaded
+    * @return Listing object
     */
   def site(cal: Calendar): Option[Listing] = {
     val key = cal.get(Calendar.YEAR) * 100 + cal.get(Calendar.MONTH) +1

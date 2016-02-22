@@ -41,7 +41,7 @@ case class StatsFile(cal: Calendar) {
     */
   def isDownloaded = {
     val allDownloadedFiles = new File(Settings.downloadsPath).listFiles()
-    allDownloadedFiles.filter(p => p.getName == fileName).length > 0
+    allDownloadedFiles.exists(p => p.getName == fileName)
   }
 
   /**
@@ -59,7 +59,7 @@ case class StatsFile(cal: Calendar) {
 
   def outputExists = {
     val allFiles = new File(Settings.downloadsPath).listFiles()
-    allFiles.filter(f => f.getName == outputFile).length > 0
+    allFiles.exists(f => f.getName == outputFile)
   }
 
 

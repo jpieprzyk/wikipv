@@ -76,9 +76,26 @@ case class PageCountRow(row: String) {
   def lang = projectParts(0)
 
 
+  /**
+    * Number of pageviews
+    *
+    * @return
+    */
   def pageViews = fields(2).toInt
 
 
+  /**
+    * There are some articles that should be filtered like
+    * index.html or Main_Page. We don't want them in our
+    * results.
+    *
+    * TODO: This depends on language, so probably it should
+    * be more complicated than this simple version
+    *
+    * @return true if this row describes article that we want
+    *         to include in stats.
+    *         false if it should be ignored
+    */
   def isValidPage = {
     ! (
         articleStr == "Main_Page"
