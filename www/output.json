@@ -1,0 +1,462 @@
+
+{
+"langs": [ "en" ,"de" ,"pl"  ], 
+
+ "en": [ 
+          { "pageName": "Web scraping", "url": "https://en.wikipedia.org/wiki/Web_scraping", "pv": 205298, "lang": "en" }
+        ,
+
+          { "pageName": "Massive Attack", "url": "https://en.wikipedia.org/wiki/Massive_Attack", "pv": 93478, "lang": "en" }
+        ,
+
+          { "pageName": "Pierre Brassau", "url": "https://en.wikipedia.org/wiki/Pierre_Brassau", "pv": 87388, "lang": "en" }
+        ,
+
+          { "pageName": "Deadpool (film)", "url": "https://en.wikipedia.org/wiki/Deadpool_%28film%29", "pv": 12004, "lang": "en" }
+        ,
+
+          { "pageName": "Neerja Bhanot", "url": "https://en.wikipedia.org/wiki/Neerja_Bhanot", "pv": 11742, "lang": "en" }
+        ,
+
+          { "pageName": "Donald Trump", "url": "https://en.wikipedia.org/wiki/Donald_Trump", "pv": 9837, "lang": "en" }
+        ,
+
+          { "pageName": "XHamster", "url": "https://en.wikipedia.org/wiki/XHamster", "pv": 9755, "lang": "en" }
+        ,
+
+          { "pageName": "Kesha", "url": "https://en.wikipedia.org/wiki/Kesha", "pv": 8934, "lang": "en" }
+        ,
+
+          { "pageName": "Dr. Luke", "url": "https://en.wikipedia.org/wiki/Dr._Luke", "pv": 7953, "lang": "en" }
+        ,
+
+          { "pageName": "Fastlane (2016)", "url": "https://en.wikipedia.org/wiki/Fastlane_%282016%29", "pv": 7402, "lang": "en" }
+        ,
+
+          { "pageName": "Deadpool", "url": "https://en.wikipedia.org/wiki/Deadpool", "pv": 7240, "lang": "en" }
+        ,
+
+          { "pageName": "Robert Kardashian", "url": "https://en.wikipedia.org/wiki/Robert_Kardashian", "pv": 7060, "lang": "en" }
+        ,
+
+          { "pageName": "List of actors who have played Elvis Presley", "url": "https://en.wikipedia.org/wiki/List_of_actors_who_have_played_Elvis_Presley", "pv": 5578, "lang": "en" }
+        ,
+
+          { "pageName": "Deaths in 2016", "url": "https://en.wikipedia.org/wiki/Deaths_in_2016", "pv": 4834, "lang": "en" }
+        ,
+
+          { "pageName": "The Walking Dead (season 6)", "url": "https://en.wikipedia.org/wiki/The_Walking_Dead_%28season_6%29", "pv": 4576, "lang": "en" }
+        ,
+
+          { "pageName": "Airpo", "url": "https://en.wikipedia.org/wiki/Airpo", "pv": 4534, "lang": "en" }
+        ,
+
+          { "pageName": "Rwandan Genocide", "url": "https://en.wikipedia.org/wiki/Rwandan_Genocide", "pv": 4507, "lang": "en" }
+        ,
+
+          { "pageName": "The Walking Dead (TV series)", "url": "https://en.wikipedia.org/wiki/The_Walking_Dead_%28TV_series%29", "pv": 4448, "lang": "en" }
+        ,
+
+          { "pageName": "O. J. Simpson", "url": "https://en.wikipedia.org/wiki/O._J._Simpson", "pv": 3878, "lang": "en" }
+        ,
+
+          { "pageName": "Neerja", "url": "https://en.wikipedia.org/wiki/Neerja", "pv": 3842, "lang": "en" }
+        ,
+
+          { "pageName": "Paul Monroe (The Walking Dead)", "url": "https://en.wikipedia.org/wiki/Paul_Monroe_%28The_Walking_Dead%29", "pv": 3794, "lang": "en" }
+        ,
+
+          { "pageName": "Java (programming language)", "url": "https://en.wikipedia.org/wiki/Java_%28programming_language%29", "pv": 3786, "lang": "en" }
+        ,
+
+          { "pageName": "February 22", "url": "https://en.wikipedia.org/wiki/February_22", "pv": 3629, "lang": "en" }
+        ,
+
+          { "pageName": "Bernie Sanders", "url": "https://en.wikipedia.org/wiki/Bernie_Sanders", "pv": 3519, "lang": "en" }
+        ,
+
+          { "pageName": "Delonte West", "url": "https://en.wikipedia.org/wiki/Delonte_West", "pv": 3469, "lang": "en" }
+        ,
+
+          { "pageName": "Republican Party presidential primaries, 2016", "url": "https://en.wikipedia.org/wiki/Republican_Party_presidential_primaries%2C_2016", "pv": 3453, "lang": "en" }
+        ,
+
+          { "pageName": "Copa América Centenario", "url": "https://en.wikipedia.org/wiki/Copa_Am%C3%A9rica_Centenario", "pv": 3434, "lang": "en" }
+        ,
+
+          { "pageName": "Kodak Zi8", "url": "https://en.wikipedia.org/wiki/Kodak_Zi8", "pv": 3284, "lang": "en" }
+        ,
+
+          { "pageName": "James Burrows", "url": "https://en.wikipedia.org/wiki/James_Burrows", "pv": 3231, "lang": "en" }
+        ,
+
+          { "pageName": "Democratic Party presidential primaries, 2016", "url": "https://en.wikipedia.org/wiki/Democratic_Party_presidential_primaries%2C_2016", "pv": 3214, "lang": "en" }
+        ,
+
+          { "pageName": "Marco Rubio", "url": "https://en.wikipedia.org/wiki/Marco_Rubio", "pv": 3171, "lang": "en" }
+        ,
+
+          { "pageName": "WrestleMania 32", "url": "https://en.wikipedia.org/wiki/WrestleMania_32", "pv": 3147, "lang": "en" }
+        ,
+
+          { "pageName": "Abiola Abrams", "url": "https://en.wikipedia.org/wiki/Abiola_Abrams", "pv": 3147, "lang": "en" }
+        ,
+
+          { "pageName": "Kim Kardashian", "url": "https://en.wikipedia.org/wiki/Kim_Kardashian", "pv": 3132, "lang": "en" }
+        ,
+
+          { "pageName": "Kanye West", "url": "https://en.wikipedia.org/wiki/Kanye_West", "pv": 3079, "lang": "en" }
+        ,
+
+          { "pageName": "List of Bollywood films of 2016", "url": "https://en.wikipedia.org/wiki/List_of_Bollywood_films_of_2016", "pv": 3078, "lang": "en" }
+        ,
+
+          { "pageName": "The Revenant (2015 film)", "url": "https://en.wikipedia.org/wiki/The_Revenant_%282015_film%29", "pv": 3068, "lang": "en" }
+        ,
+
+          { "pageName": "List of The Walking Dead episodes", "url": "https://en.wikipedia.org/wiki/List_of_The_Walking_Dead_episodes", "pv": 3043, "lang": "en" }
+        ,
+
+          { "pageName": "Boris Johnson", "url": "https://en.wikipedia.org/wiki/Boris_Johnson", "pv": 2931, "lang": "en" }
+        ,
+
+          { "pageName": "List of feed aggregators", "url": "https://en.wikipedia.org/wiki/List_of_feed_aggregators", "pv": 2916, "lang": "en" }
+        ,
+
+          { "pageName": "Acanthodii", "url": "https://en.wikipedia.org/wiki/Acanthodii", "pv": 2908, "lang": "en" }
+        ,
+
+          { "pageName": "Everett K. Ross", "url": "https://en.wikipedia.org/wiki/Everett_K._Ross", "pv": 2908, "lang": "en" }
+        ,
+
+          { "pageName": "Super Tuesday", "url": "https://en.wikipedia.org/wiki/Super_Tuesday", "pv": 2892, "lang": "en" }
+        ,
+
+          { "pageName": "Barack Obama", "url": "https://en.wikipedia.org/wiki/Barack_Obama", "pv": 2832, "lang": "en" }
+        ,
+
+          { "pageName": "Crossbones (comics)", "url": "https://en.wikipedia.org/wiki/Crossbones_%28comics%29", "pv": 2794, "lang": "en" }
+        ,
+
+          { "pageName": "The Life of Pablo", "url": "https://en.wikipedia.org/wiki/The_Life_of_Pablo", "pv": 2774, "lang": "en" }
+        ,
+
+          { "pageName": "Parking", "url": "https://en.wikipedia.org/wiki/Parking", "pv": 2751, "lang": "en" }
+        ,
+
+          { "pageName": "", "url": "https://en.wikipedia.org/wiki/", "pv": 2744, "lang": "en" }
+        ,
+
+          { "pageName": "Love (TV series)", "url": "https://en.wikipedia.org/wiki/Love_%28TV_series%29", "pv": 2742, "lang": "en" }
+        ,
+
+          { "pageName": "Ryan Reynolds", "url": "https://en.wikipedia.org/wiki/Ryan_Reynolds", "pv": 2733, "lang": "en" }
+         ]
+        ,
+ 
+ "de": [ 
+          { "pageName": "Sasha (Sänger)", "url": "https://de.wikipedia.org/wiki/Sasha_%28S%C3%A4nger%29", "pv": 4392, "lang": "de" }
+        ,
+
+          { "pageName": "Frank Plasberg", "url": "https://de.wikipedia.org/wiki/Frank_Plasberg", "pv": 3743, "lang": "de" }
+        ,
+
+          { "pageName": "Anne Gesthuysen", "url": "https://de.wikipedia.org/wiki/Anne_Gesthuysen", "pv": 3307, "lang": "de" }
+        ,
+
+          { "pageName": "Hauptseite", "url": "https://de.wikipedia.org/wiki/Hauptseite", "pv": 2451, "lang": "de" }
+        ,
+
+          { "pageName": "Roger Willemsen", "url": "https://de.wikipedia.org/wiki/Roger_Willemsen", "pv": 1566, "lang": "de" }
+        ,
+
+          { "pageName": "Deutschland", "url": "https://de.wikipedia.org/wiki/Deutschland", "pv": 1560, "lang": "de" }
+        ,
+
+          { "pageName": "Südkaper", "url": "https://de.wikipedia.org/wiki/S%C3%BCdkaper", "pv": 1549, "lang": "de" }
+        ,
+
+          { "pageName": "Cheops-Pyramide", "url": "https://de.wikipedia.org/wiki/Cheops-Pyramide", "pv": 1416, "lang": "de" }
+        ,
+
+          { "pageName": "Alena Gerber", "url": "https://de.wikipedia.org/wiki/Alena_Gerber", "pv": 1173, "lang": "de" }
+        ,
+
+          { "pageName": "Security-Token", "url": "https://de.wikipedia.org/wiki/Security-Token", "pv": 1167, "lang": "de" }
+        ,
+
+          { "pageName": "Angela Maas", "url": "https://de.wikipedia.org/wiki/Angela_Maas", "pv": 1150, "lang": "de" }
+        ,
+
+          { "pageName": "Nekrolog 2016", "url": "https://de.wikipedia.org/wiki/Nekrolog_2016", "pv": 946, "lang": "de" }
+        ,
+
+          { "pageName": "Alain Delon", "url": "https://de.wikipedia.org/wiki/Alain_Delon", "pv": 891, "lang": "de" }
+        ,
+
+          { "pageName": "Helmuth Lohner", "url": "https://de.wikipedia.org/wiki/Helmuth_Lohner", "pv": 867, "lang": "de" }
+        ,
+
+          { "pageName": "Claus von Bülow", "url": "https://de.wikipedia.org/wiki/Claus_von_B%C3%BClow", "pv": 796, "lang": "de" }
+        ,
+
+          { "pageName": "Sophie Scholl", "url": "https://de.wikipedia.org/wiki/Sophie_Scholl", "pv": 771, "lang": "de" }
+        ,
+
+          { "pageName": "Alternative für Deutschland", "url": "https://de.wikipedia.org/wiki/Alternative_f%C3%BCr_Deutschland", "pv": 748, "lang": "de" }
+        ,
+
+          { "pageName": "22. Februar", "url": "https://de.wikipedia.org/wiki/22._Februar", "pv": 745, "lang": "de" }
+        ,
+
+          { "pageName": "Julia Klöckner", "url": "https://de.wikipedia.org/wiki/Julia_Kl%C3%B6ckner", "pv": 723, "lang": "de" }
+        ,
+
+          { "pageName": "Thomas Middelhoff", "url": "https://de.wikipedia.org/wiki/Thomas_Middelhoff", "pv": 713, "lang": "de" }
+        ,
+
+          { "pageName": "Carrageen", "url": "https://de.wikipedia.org/wiki/Carrageen", "pv": 713, "lang": "de" }
+        ,
+
+          { "pageName": "Köln 50667", "url": "https://de.wikipedia.org/wiki/K%C3%B6ln_50667", "pv": 704, "lang": "de" }
+        ,
+
+          { "pageName": "The Walking Dead (Fernsehserie)", "url": "https://de.wikipedia.org/wiki/The_Walking_Dead_%28Fernsehserie%29", "pv": 689, "lang": "de" }
+        ,
+
+          { "pageName": "SOKO München", "url": "https://de.wikipedia.org/wiki/SOKO_M%C3%BCnchen", "pv": 689, "lang": "de" }
+        ,
+
+          { "pageName": "Frauenwahlrecht", "url": "https://de.wikipedia.org/wiki/Frauenwahlrecht", "pv": 653, "lang": "de" }
+        ,
+
+          { "pageName": "Donald Trump", "url": "https://de.wikipedia.org/wiki/Donald_Trump", "pv": 638, "lang": "de" }
+        ,
+
+          { "pageName": "Wikipedia", "url": "https://de.wikipedia.org/wiki/Wikipedia", "pv": 633, "lang": "de" }
+        ,
+
+          { "pageName": "Gewöhnliche Douglasie", "url": "https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Douglasie", "pv": 620, "lang": "de" }
+        ,
+
+          { "pageName": "Deadpool (Film)", "url": "https://de.wikipedia.org/wiki/Deadpool_%28Film%29", "pv": 609, "lang": "de" }
+        ,
+
+          { "pageName": "Inka Bause", "url": "https://de.wikipedia.org/wiki/Inka_Bause", "pv": 607, "lang": "de" }
+        ,
+
+          { "pageName": "Schlacht um Verdun", "url": "https://de.wikipedia.org/wiki/Schlacht_um_Verdun", "pv": 600, "lang": "de" }
+        ,
+
+          { "pageName": "Joscha Kiefer", "url": "https://de.wikipedia.org/wiki/Joscha_Kiefer", "pv": 592, "lang": "de" }
+        ,
+
+          { "pageName": "Suffragetten", "url": "https://de.wikipedia.org/wiki/Suffragetten", "pv": 591, "lang": "de" }
+        ,
+
+          { "pageName": "Tyler Hoechlin", "url": "https://de.wikipedia.org/wiki/Tyler_Hoechlin", "pv": 537, "lang": "de" }
+        ,
+
+          { "pageName": "Game of Thrones", "url": "https://de.wikipedia.org/wiki/Game_of_Thrones", "pv": 536, "lang": "de" }
+        ,
+
+          { "pageName": "Frauen in der Politik", "url": "https://de.wikipedia.org/wiki/Frauen_in_der_Politik", "pv": 532, "lang": "de" }
+        ,
+
+          { "pageName": "Vereinigte Staaten", "url": "https://de.wikipedia.org/wiki/Vereinigte_Staaten", "pv": 504, "lang": "de" }
+        ,
+
+          { "pageName": "Periodensystem", "url": "https://de.wikipedia.org/wiki/Periodensystem", "pv": 493, "lang": "de" }
+        ,
+
+          { "pageName": "Erster Weltkrieg", "url": "https://de.wikipedia.org/wiki/Erster_Weltkrieg", "pv": 483, "lang": "de" }
+        ,
+
+          { "pageName": "Bianca Hein", "url": "https://de.wikipedia.org/wiki/Bianca_Hein", "pv": 472, "lang": "de" }
+        ,
+
+          { "pageName": "Sachsen", "url": "https://de.wikipedia.org/wiki/Sachsen", "pv": 465, "lang": "de" }
+        ,
+
+          { "pageName": "Automobilfertigung", "url": "https://de.wikipedia.org/wiki/Automobilfertigung", "pv": 465, "lang": "de" }
+        ,
+
+          { "pageName": "Ove Verner Hansen", "url": "https://de.wikipedia.org/wiki/Ove_Verner_Hansen", "pv": 462, "lang": "de" }
+        ,
+
+          { "pageName": "Al-Askari-Schrein", "url": "https://de.wikipedia.org/wiki/Al-Askari-Schrein", "pv": 462, "lang": "de" }
+        ,
+
+          { "pageName": "Pegida", "url": "https://de.wikipedia.org/wiki/Pegida", "pv": 455, "lang": "de" }
+        ,
+
+          { "pageName": "Jörg Pilawa", "url": "https://de.wikipedia.org/wiki/J%C3%B6rg_Pilawa", "pv": 454, "lang": "de" }
+        ,
+
+          { "pageName": "Errol Flynn", "url": "https://de.wikipedia.org/wiki/Errol_Flynn", "pv": 451, "lang": "de" }
+        ,
+
+          { "pageName": "Umberto Eco", "url": "https://de.wikipedia.org/wiki/Umberto_Eco", "pv": 444, "lang": "de" }
+        ,
+
+          { "pageName": "Colonia Dignidad", "url": "https://de.wikipedia.org/wiki/Colonia_Dignidad", "pv": 437, "lang": "de" }
+        ,
+
+          { "pageName": "Marta Jandová", "url": "https://de.wikipedia.org/wiki/Marta_Jandov%C3%A1", "pv": 433, "lang": "de" }
+         ]
+        ,
+ 
+ "pl": [ 
+          { "pageName": "Czesław Kiszczak", "url": "https://pl.wikipedia.org/wiki/Czes%C5%82aw_Kiszczak", "pv": 3826, "lang": "pl" }
+        ,
+
+          { "pageName": "Lech Wałęsa", "url": "https://pl.wikipedia.org/wiki/Lech_Wa%C5%82%C4%99sa", "pv": 3140, "lang": "pl" }
+        ,
+
+          { "pageName": "Kornel Morawiecki", "url": "https://pl.wikipedia.org/wiki/Kornel_Morawiecki", "pv": 1894, "lang": "pl" }
+        ,
+
+          { "pageName": "Sophie Marceau", "url": "https://pl.wikipedia.org/wiki/Sophie_Marceau", "pv": 1504, "lang": "pl" }
+        ,
+
+          { "pageName": "Andrzej Żuławski", "url": "https://pl.wikipedia.org/wiki/Andrzej_%C5%BBu%C5%82awski", "pv": 1423, "lang": "pl" }
+        ,
+
+          { "pageName": "Zmarli w lutym 2016", "url": "https://pl.wikipedia.org/wiki/Zmarli_w_lutym_2016", "pv": 1180, "lang": "pl" }
+        ,
+
+          { "pageName": "Służba Bezpieczeństwa (PRL)", "url": "https://pl.wikipedia.org/wiki/S%C5%82u%C5%BCba_Bezpiecze%C5%84stwa_%28PRL%29", "pv": 862, "lang": "pl" }
+        ,
+
+          { "pageName": "Maria Teresa Kiszczak", "url": "https://pl.wikipedia.org/wiki/Maria_Teresa_Kiszczak", "pv": 768, "lang": "pl" }
+        ,
+
+          { "pageName": "21 lutego", "url": "https://pl.wikipedia.org/wiki/21_lutego", "pv": 601, "lang": "pl" }
+        ,
+
+          { "pageName": "Antarktyda", "url": "https://pl.wikipedia.org/wiki/Antarktyda", "pv": 590, "lang": "pl" }
+        ,
+
+          { "pageName": "Żołnierze wyklęci", "url": "https://pl.wikipedia.org/wiki/%C5%BBo%C5%82nierze_wykl%C4%99ci", "pv": 537, "lang": "pl" }
+        ,
+
+          { "pageName": "Sławomir Cenckiewicz", "url": "https://pl.wikipedia.org/wiki/S%C5%82awomir_Cenckiewicz", "pv": 536, "lang": "pl" }
+        ,
+
+          { "pageName": "Arktyka", "url": "https://pl.wikipedia.org/wiki/Arktyka", "pv": 536, "lang": "pl" }
+        ,
+
+          { "pageName": "Strona główna", "url": "https://pl.wikipedia.org/wiki/Strona_g%C5%82%C3%B3wna", "pv": 484, "lang": "pl" }
+        ,
+
+          { "pageName": "Mistrzostwa Świata w Łyżwiarstwie Szybkim na Dystansach 2016", "url": "https://pl.wikipedia.org/wiki/Mistrzostwa_%C5%9Awiata_w_%C5%81y%C5%BCwiarstwie_Szybkim_na_Dystansach_2016", "pv": 470, "lang": "pl" }
+        ,
+
+          { "pageName": "Polska", "url": "https://pl.wikipedia.org/wiki/Polska", "pv": 440, "lang": "pl" }
+        ,
+
+          { "pageName": "Sulejman Wspaniały", "url": "https://pl.wikipedia.org/wiki/Sulejman_Wspania%C5%82y", "pv": 436, "lang": "pl" }
+        ,
+
+          { "pageName": "Xawery Żuławski", "url": "https://pl.wikipedia.org/wiki/Xawery_%C5%BBu%C5%82awski", "pv": 428, "lang": "pl" }
+        ,
+
+          { "pageName": "Pseudoefedryna", "url": "https://pl.wikipedia.org/wiki/Pseudoefedryna", "pv": 424, "lang": "pl" }
+        ,
+
+          { "pageName": "Witold Bereś", "url": "https://pl.wikipedia.org/wiki/Witold_Bere%C5%9B", "pv": 417, "lang": "pl" }
+        ,
+
+          { "pageName": "Pingwiny", "url": "https://pl.wikipedia.org/wiki/Pingwiny", "pv": 406, "lang": "pl" }
+        ,
+
+          { "pageName": "Mateusz Morawiecki", "url": "https://pl.wikipedia.org/wiki/Mateusz_Morawiecki", "pv": 364, "lang": "pl" }
+        ,
+
+          { "pageName": "Mieczysław Wachowski", "url": "https://pl.wikipedia.org/wiki/Mieczys%C5%82aw_Wachowski", "pv": 354, "lang": "pl" }
+        ,
+
+          { "pageName": "SB a Lech Wałęsa", "url": "https://pl.wikipedia.org/wiki/SB_a_Lech_Wa%C5%82%C4%99sa", "pv": 345, "lang": "pl" }
+        ,
+
+          { "pageName": "Rozmowy w Magdalence", "url": "https://pl.wikipedia.org/wiki/Rozmowy_w_Magdalence", "pv": 342, "lang": "pl" }
+        ,
+
+          { "pageName": "Jadwiga Korczakowska", "url": "https://pl.wikipedia.org/wiki/Jadwiga_Korczakowska", "pv": 338, "lang": "pl" }
+        ,
+
+          { "pageName": "Piotr Grudziński", "url": "https://pl.wikipedia.org/wiki/Piotr_Grudzi%C5%84ski", "pv": 332, "lang": "pl" }
+        ,
+
+          { "pageName": "22 lutego", "url": "https://pl.wikipedia.org/wiki/22_lutego", "pv": 331, "lang": "pl" }
+        ,
+
+          { "pageName": "Fryderyk Chopin", "url": "https://pl.wikipedia.org/wiki/Fryderyk_Chopin", "pv": 321, "lang": "pl" }
+        ,
+
+          { "pageName": "Wojciech Jaruzelski", "url": "https://pl.wikipedia.org/wiki/Wojciech_Jaruzelski", "pv": 309, "lang": "pl" }
+        ,
+
+          { "pageName": "Roast", "url": "https://pl.wikipedia.org/wiki/Roast", "pv": 305, "lang": "pl" }
+        ,
+
+          { "pageName": "Henryk Sienkiewicz", "url": "https://pl.wikipedia.org/wiki/Henryk_Sienkiewicz", "pv": 305, "lang": "pl" }
+        ,
+
+          { "pageName": "Małgorzata Braunek", "url": "https://pl.wikipedia.org/wiki/Ma%C5%82gorzata_Braunek", "pv": 299, "lang": "pl" }
+        ,
+
+          { "pageName": "Christopher Lambert", "url": "https://pl.wikipedia.org/wiki/Christopher_Lambert", "pv": 288, "lang": "pl" }
+        ,
+
+          { "pageName": "Układ Słoneczny", "url": "https://pl.wikipedia.org/wiki/Uk%C5%82ad_S%C5%82oneczny", "pv": 288, "lang": "pl" }
+        ,
+
+          { "pageName": "Grenlandia", "url": "https://pl.wikipedia.org/wiki/Grenlandia", "pv": 288, "lang": "pl" }
+        ,
+
+          { "pageName": "Dzień Myśli Braterskiej", "url": "https://pl.wikipedia.org/wiki/Dzie%C5%84_My%C5%9Bli_Braterskiej", "pv": 281, "lang": "pl" }
+        ,
+
+          { "pageName": "Wspaniałe stulecie", "url": "https://pl.wikipedia.org/wiki/Wspania%C5%82e_stulecie", "pv": 276, "lang": "pl" }
+        ,
+
+          { "pageName": "Puchar Świata w skokach narciarskich 2015/2016", "url": "https://pl.wikipedia.org/wiki/Puchar_%C5%9Awiata_w_skokach_narciarskich_2015%2F2016", "pv": 275, "lang": "pl" }
+        ,
+
+          { "pageName": "Jarosław Kaczyński", "url": "https://pl.wikipedia.org/wiki/Jaros%C5%82aw_Kaczy%C5%84ski", "pv": 269, "lang": "pl" }
+        ,
+
+          { "pageName": "Umberto Eco", "url": "https://pl.wikipedia.org/wiki/Umberto_Eco", "pv": 251, "lang": "pl" }
+        ,
+
+          { "pageName": "Robert Lewandowski", "url": "https://pl.wikipedia.org/wiki/Robert_Lewandowski", "pv": 251, "lang": "pl" }
+        ,
+
+          { "pageName": "Prezydenci Polski", "url": "https://pl.wikipedia.org/wiki/Prezydenci_Polski", "pv": 244, "lang": "pl" }
+        ,
+
+          { "pageName": "Danuta Wałęsa", "url": "https://pl.wikipedia.org/wiki/Danuta_Wa%C5%82%C4%99sa", "pv": 243, "lang": "pl" }
+        ,
+
+          { "pageName": "Mikołaj Kopernik", "url": "https://pl.wikipedia.org/wiki/Miko%C5%82aj_Kopernik", "pv": 239, "lang": "pl" }
+        ,
+
+          { "pageName": "Anna Walentynowicz", "url": "https://pl.wikipedia.org/wiki/Anna_Walentynowicz", "pv": 239, "lang": "pl" }
+        ,
+
+          { "pageName": "Lista Macierewicza", "url": "https://pl.wikipedia.org/wiki/Lista_Macierewicza", "pv": 235, "lang": "pl" }
+        ,
+
+          { "pageName": "II wojna światowa", "url": "https://pl.wikipedia.org/wiki/II_wojna_%C5%9Bwiatowa", "pv": 234, "lang": "pl" }
+        ,
+
+          { "pageName": "Popowo (gmina Tłuchowo)", "url": "https://pl.wikipedia.org/wiki/Popowo_%28gmina_T%C5%82uchowo%29", "pv": 232, "lang": "pl" }
+        ,
+
+          { "pageName": "Michów (gmina)", "url": "https://pl.wikipedia.org/wiki/Mich%C3%B3w_%28gmina%29", "pv": 228, "lang": "pl" }
+         ]
+        ,
+"lastUpdated": "2016-02-22 18:00"
+}
+      

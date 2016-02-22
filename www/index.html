@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wiki-wieści</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta name="author" content="Jakub Pieprzyk" />
+    <meta name="keywords" content="wikipedia news top stories articles popular"/>
+    <meta name="description" content="Wikipedia trending topics"/>
+
+    <script src="http://bigpicture.pl/d3.v3.min.js"></script>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext);
+
+        body 		{ 	font-family: 'Lato', Helvetica, Arial, sans-serif;
+        margin: 50px;
+        font-weight: 400;
+        }
+        #info		{
+        text-align: justify;
+        width: 20%;
+        font-size: smaller;
+        color: #888;
+        left: 50%;
+        margin: 0 auto;
+        }
+        #langSelector   {
+        text-align: justify;
+        width: 20%;
+        left: 50%;
+        margin: 0 auto;
+        padding-top: 10px;
+        }
+        #title		{ 	font-size: 400%;
+        font-weight: 700;
+        text-align: center;
+        padding: 50px;
+        }
+        #paper		{
+        background-color: #fff;
+        position: relative;
+        margin: 20px;
+        }
+        #timestamp {
+        width: 20%;
+        left: 50%;
+        font-size: smaller;
+        margin: 0 auto;
+        padding-top: 20px;
+        }
+
+        div.article {
+        background-color: #fff;
+        margin: 10px;
+        padding: 10px;
+        }
+
+        div.article a {
+        font-size: 100%;
+        }
+
+        a {
+        color: #66a;
+        text-decoration: none;
+        }
+
+        a:visited {	color: #66a; }
+        a:hiver {	color: #66f; }
+
+        div.bar {
+        height: 25px;
+        background-color: #c55;
+        }
+
+        div.bar.hl {
+        height: 25px;
+        background-color: #f55;
+        }
+
+        td.barCell {
+        width: 100%;
+        }
+
+        td.pageCell {
+        width: 30%;
+        max-width: 30%;
+        }
+
+        td.numberCell {
+        width: 1%;
+        padding-right: 5px;
+        font-size: small;
+        color: #999;
+        text-align: right;
+        }
+
+        td.pvCell {
+        width: 1%;
+        padding-right: 5px;
+        font-size: small;
+        text-align: right
+        }
+
+        th {
+        text-align: left;
+        text-decoration: none;
+        font-size: small;
+        color: #999;
+        }
+
+        hr {
+        border: none;
+        height: 1px;
+        background-color: #000;
+        }
+
+        table {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%
+        }
+    </style>
+
+
+    <!--script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55526002-1', 'auto');
+  ga('send', 'pageview');
+
+</script-->
+
+</head>
+<body>
+<div id="header">
+    <div id="title">Najpopularniejsze strony na Wikipedii</div>
+    <div id="info">
+        Co to takiego? Ta strona pokazuje o czym czytają internauci. Poniżej znajduje się
+        lista artykułów na polskiej Wikipedii, które są najpopularniejsze w
+        badanej godzinie.
+    </div>
+    <div id="timestamp">Ostatnia aktualizacja: </div>
+    <div id="langSelector">
+        Język:<br />
+        <input id="lang_pl" type="radio" name="lang" value="pl" checked onclick="langSelected()">polski<br />
+        <input id="lang_en" type="radio" name="lang" value="en" onclick="langSelected()">English<br />
+        <input id="lang_de" type="radio" name="lang" value="de" onclick="langSelected()">deutsch<br />
+    </div>
+</div>
+<div id="paper">
+    <table>
+        <thead>
+        <tr>
+            <th> </th>
+            <th>artykuł</th>
+            <th>odsłony</th>
+            <th> </th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<hr />
+
+<script>
+
+var data;
+var all_data;
+
+var settings = {
+	min_pv : 0,
+	max_pv : 0,
+	pct_scale: null
+}
+
+
+function langSelected() {
+	if (document.getElementById('lang_pl').checked) {
+		data = all_data.pl;
+	} else if (document.getElementById('lang_de').checked) {
+                data = all_data.de;
+        } else if (document.getElementById('lang_en').checked) {
+                data = all_data.en;
+        }
+	visualize();
+}
+
+d3.json("output.json", function(error, json) {
+	if (error) console.log(error);
+	else {
+		all_data = json;
+		langSelected();
+	}	
+});
+
+
+function visualize() {
+	settings.min_pv = d3.min(d3.values(data), function(d) { return d.pv; });
+	settings.max_pv = d3.max(d3.values(data), function(d) { return d.pv; });
+	settings.pct_scale = d3.scale.linear().range([0, 100]).domain([0, settings.max_pv]);
+
+	d3.select("#paper").select("tbody").selectAll("tr").remove();
+	var tr = d3.select("#paper").select("tbody").selectAll("tr").data(data).enter().append("tr");
+	
+	tr.append("td")
+	.attr("class", "numberCell")
+	.text(function(d, i) { return (i + 1) + "."; })
+	;
+	
+	tr.append("td")
+	.attr("class", "pageCell")
+	.html(function(d) { return d.pageName + ' <a href="' + d.url + '" target="_blank">&#x2197;</a';})
+	;
+
+	tr.append("td")
+	.attr("class", "pvCell")
+	.text(function(d) { return d.pv;})
+	;
+
+	tr.append("td")
+	.attr("class", "barCell")
+	.append("div")
+	.attr("class", "bar")
+	.style("width", "0px")
+	.on("mouseover", function(d) {
+		d3.select(this).attr("class", "bar hl")
+	})
+	.on("mouseout", function(d) {
+		d3.select(this).attr("class", "bar")
+	})
+	.transition()
+	.delay(200)
+	.duration(500)
+	.style("width", function(d) { 
+		return settings.pct_scale(d.pv) + "%";	
+	})
+	;
+
+				
+	d3.select("#timestamp")
+	.text("Aktualizacja: " + all_data.lastUpdated)
+	;
+}
+
+</script>
+
+
+<!--script src="http://bigpicture.pl/cookies_warning.js"> </script-->
+
+
+</body>
+</html>
