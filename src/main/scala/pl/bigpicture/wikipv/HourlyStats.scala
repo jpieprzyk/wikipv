@@ -18,7 +18,7 @@ object HourlyStats {
 
     rdd.filter(row => row.isWikipedia)
       .filter(row => row.isValidPage)
-      .filter(row => List("pl", "en", "de").contains(row.lang))
+      .filter(row => List("pl", "en", "de", "ru", "fr", "es", "pt", "tr", "ar").contains(row.lang))
       .map(row => ((row.lang, row.article), row.pageViews))
       .reduceByKey( _ + _ )
       .map( tuple => (tuple._1._1, (tuple._1._2, tuple._2)))
