@@ -100,6 +100,9 @@ case class PageCountRow(row: String) {
     ! (
         articleStr == "Main_Page"
       || articleStr == "Hauptseite"
+      || articleStr == "%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"
+      || articleStr == "%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9"
+      || articleStr == "Ana_Sayfa"
       || articleStr == "Strona_g%C5%82%C3%B3wna"
       || articleStr.contains(":")
       || articleStr == "index.html"
