@@ -17,6 +17,7 @@
         margin: 50px;
         font-weight: 400;
         }
+        
         #info		{
         text-align: justify;
         width: 50%;
@@ -25,12 +26,12 @@
         left: 50%;
         margin: 0 auto;
         }
+        
         #langSelector   {
-        text-align: justify;
-        width: 20%;
-        left: 50%;
-        margin: 0 auto;
-        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+       /* margin: 0 auto; */
+        padding-top: 25px;
         }
         #title		{ 	font-size: 400%;
         font-weight: 700;
@@ -43,8 +44,7 @@
         margin: 20px;
         }
         #timestamp {
-        width: 20%;
-        left: 50%;
+        width: 50%;
         font-size: smaller;
         margin: 0 auto;
         padding-top: 20px;
@@ -87,6 +87,14 @@
 			line-height: 40px;
 		}
 		
+		a {
+			margin-left: 10px;
+			color: #33f;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		
+		a:visited {color: #55f;}
     </style>
 
 
@@ -113,9 +121,7 @@
     <div id="timestamp">Ostatnia aktualizacja: </div>
     <div id="langSelector">
         Język Wikipedii:<br />
-        <input id="lang_pl" type="radio" name="lang" value="pl" checked onclick="langSelected()">polski<br />
-        <input id="lang_en" type="radio" name="lang" value="en" onclick="langSelected()">English<br />
-        <input id="lang_de" type="radio" name="lang" value="de" onclick="langSelected()">deutsch<br />
+        
     </div>
 </div>
 <div id="paper">
@@ -130,6 +136,19 @@
 
 <script>
 
+var langDict = [
+	{ "code": "pl", "label": "Polski", "eng_label": "Polish" },
+	{ "code": "en", "label": "English", "eng_label": "English" },
+	{ "code": "de", "label": "Deutsh", "eng_label": "German" },
+	{ "code": "fr", "label": "Français", "eng_label": "French" },
+	{ "code": "es", "label": "Español", "eng_label": "Spanish" },
+	{ "code": "ru", "label": "Русский", "eng_label": "Russian" },
+	{ "code": "ar", "label": "العربي", "eng_label": "Arabic" },
+	{ "code": "pt", "label": "Português", "eng_label": "Portugese" },
+	{ "code": "tr", "label": "Türkçe", "eng_label": "Turkish" }
+	];
+
+var langs;
 var all_data;
 var data;
 	
@@ -139,14 +158,10 @@ var settings = {
 	pct_scale: null
 };
 
-function langSelected() {
-	if (document.getElementById('lang_pl').checked) {
-		data = all_data.pl;
-	} else if (document.getElementById('lang_de').checked) {
-                data = all_data.de;
-        } else if (document.getElementById('lang_en').checked) {
-                data = all_data.en;
-        }
+function langSelected(selectLang) {
+	//var selectLang = d3.selectAll("input")[0].filter(function(d) {return d.checked;}).map(function(d) {return d.value; })[0];
+	data = all_data[selectLang];
+	console.log(selectLang);
 	visualize();
 }
 
@@ -154,7 +169,22 @@ d3.json("output.json", function(error, json) {
 	if (error) console.log(error);
 	else {
 		all_data = json;
-		langSelected();
+		
+		langs = langDict.filter(function(d) { return all_data.langs.indexOf(d.code) > 0; });
+		
+		var span = d3
+		.select("#langSelector")
+		.selectAll("span")
+		.data(langs).enter().append("span")
+		;
+		
+		span.append("a")
+		.on("click", function(d) { langSelected(d.code); })
+		.text(function(d) { return d.label; })
+		.attr("title", function(d) { return d.eng_label; })
+		;
+		
+		langSelected(langs[0].code);
 	}	
 });
 	
@@ -178,7 +208,7 @@ function visualize() {
 		.transition()
 		.delay(200)
 		.duration(500)
-		.style("width", function(d) { return Math.floor(settings.pct_scale(d.pv)) + "%"; })
+		.style("width", function(d) { return settings.pct_scale(d.pv) + "%"; })
 	;
 
 	row.append("div")
@@ -205,7 +235,7 @@ function visualize() {
 	;
 	
 	d3.select("#timestamp")
-	.text("Aktualizacja: " + all_data.lastUpdated)
+	.text("Wyniki z: " + all_data.lastUpdated)
 	;
 }
 	
