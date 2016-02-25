@@ -1,8 +1,10 @@
 package pl.bigpicture.wikipv.write
 
 import java.io.{File, PrintWriter}
+import java.net.{URLEncoder, URL}
 import java.util.Calendar
 
+import org.apache.commons.lang3.StringEscapeUtils
 import org.apache.spark.rdd.RDD
 import pl.bigpicture.wikipv.PageStat
 
@@ -34,7 +36,7 @@ object JsonWriter {
       .mapValues( iter => iter.toList.map(x =>
         """
           { "pageName": "%s", "url": "%s", "pv": %d, "lang": "%s" }
-        """.format(x.page, x.pageURL, x.pv, x.lang) ).mkString(",\n"))
+        """.format(x.pageTitleJson, x.pageURL, x.pv, x.lang) ).mkString(",\n"))
       .map(tuple =>
         """
           | "%s": [ %s ]

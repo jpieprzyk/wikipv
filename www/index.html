@@ -170,7 +170,7 @@ d3.json("output.json", function(error, json) {
 	else {
 		all_data = json;
 		
-		langs = langDict.filter(function(d) { return all_data.langs.indexOf(d.code) > 0; });
+		langs = langDict.filter(function(d) { return all_data.langs.indexOf(d.code) >= 0; });
 		
 		var span = d3
 		.select("#langSelector")

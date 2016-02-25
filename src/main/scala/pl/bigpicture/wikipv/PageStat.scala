@@ -14,4 +14,6 @@ case class PageStat(page: String, lang: String, pv: Int, ts: Int) {
     */
   def pageURL = "https://%s.wikipedia.org/wiki/%s".format(lang, pageTitleURL)
 
+  def pageTitleJson = page.replace("\"", "\\\"")
+
 }
