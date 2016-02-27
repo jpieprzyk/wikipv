@@ -80,6 +80,10 @@
 			line-height: 40px;
 			cursor:pointer;
 		}
+		
+		div.label:hover {
+			text-decoration: underline;
+		}
 
 		div.pv {
 			position: absolute;
@@ -121,7 +125,6 @@
     <div id="timestamp">Ostatnia aktualizacja: </div>
     <div id="langSelector">
         Język Wikipedii:<br />
-        
     </div>
 </div>
 <div id="paper">
@@ -159,9 +162,7 @@ var settings = {
 };
 
 function langSelected(selectLang) {
-	//var selectLang = d3.selectAll("input")[0].filter(function(d) {return d.checked;}).map(function(d) {return d.value; })[0];
 	data = all_data[selectLang];
-	console.log(selectLang);
 	visualize();
 }
 
@@ -180,7 +181,7 @@ d3.json("output.json", function(error, json) {
 		
 		span.append("a")
 		.on("click", function(d) { langSelected(d.code); })
-		.text(function(d) { return d.label; })
+		.text(function(d) { return d.label+ " "; })
 		.attr("title", function(d) { return d.eng_label; })
 		;
 		
@@ -189,7 +190,6 @@ d3.json("output.json", function(error, json) {
 });
 	
 function visualize() {
-	settings.min_pv = d3.min(d3.values(data), function(d) { return d.pv; });
 	settings.max_pv = d3.max(d3.values(data), function(d) { return d.pv; });
 	settings.pct_scale = d3.scale.linear().range([0, 100]).domain([0, settings.max_pv]);
 

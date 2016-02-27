@@ -106,6 +106,10 @@ case class PageCountRow(row: String) {
       || articleStr == "Strona_g%C5%82%C3%B3wna"
       || articleStr.contains(":")
       || articleStr == "index.html"
+      || articleStr == "_"
+      || articleStr.endsWith(".jpg")
+      || articleStr.endsWith(".php")
+      || articleStr.endsWith(".html")
       || articleStr.length == 0
       )
   }
