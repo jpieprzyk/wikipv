@@ -99,6 +99,12 @@
 		}
 		
 		a:visited {color: #55f;}
+		
+		a[select=true] {
+			background-color: #33f;
+			color: #fff;
+		}
+		
     </style>
 
 
@@ -178,13 +184,19 @@ d3.json("output.json", function(error, json) {
 		.selectAll("span")
 		.data(langs).enter().append("span")
 		;
-		
+				
 		span.append("a")
-		.on("click", function(d) { langSelected(d.code); })
+		.attr("id", function(d) { return "a_" + d.code; })
+		.on("click", function(d) { 
+			d3.select("#langSelector").selectAll("a").attr("select","false");
+			d3.select(this).attr("select","true");
+			langSelected(d.code); 
+		})
 		.text(function(d) { return d.label+ " "; })
 		.attr("title", function(d) { return d.eng_label; })
 		;
-		
+
+		d3.select("#a_" + langs[0].code).attr("select","true");
 		langSelected(langs[0].code);
 	}	
 });
