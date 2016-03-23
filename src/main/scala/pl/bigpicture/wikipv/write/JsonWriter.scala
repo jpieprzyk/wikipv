@@ -1,6 +1,6 @@
 package pl.bigpicture.wikipv.write
 
-import java.io.{File, PrintWriter}
+import java.io._
 import java.net.{URLEncoder, URL}
 import java.util.Calendar
 
@@ -52,9 +52,12 @@ object JsonWriter {
         |}
       """.stripMargin.format(langHeader, content, getTimestamp(cal))
 
-    val pw = new PrintWriter(new File(fileName))
-    pw.print(result)
-    pw.close()
+    val pw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8"))
+    try {
+      pw.write(result)
+    } finally {
+      pw.close()
+    }
 
   }
 
