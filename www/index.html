@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Wiki-wieści</title>
+    <title>Wiki News</title>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <meta name="author" content="Jakub Pieprzyk" />
@@ -17,7 +17,7 @@
         margin: 50px;
         font-weight: 400;
         }
-        
+
         #info		{
         text-align: justify;
         width: 50%;
@@ -26,7 +26,7 @@
         left: 50%;
         margin: 0 auto;
         }
-        
+
         #langSelector   {
         text-align: center;
         width: 100%;
@@ -69,18 +69,18 @@
 			height: 100%;
 			position: absolute;
 		}
-		
+
 		div.row:hover div.bar {
 			background-color: #f88;
 		}
-		
+
 		div.label {
 			position: absolute;
 			height: 100%;
 			line-height: 40px;
 			cursor:pointer;
 		}
-		
+
 		div.label:hover {
 			text-decoration: underline;
 		}
@@ -90,21 +90,21 @@
 			height: 100px;
 			line-height: 40px;
 		}
-		
+
 		a {
 			margin-left: 10px;
 			color: #33f;
 			text-decoration: underline;
 			cursor: pointer;
 		}
-		
+
 		a:visited {color: #55f;}
-		
+
 		a[select=true] {
 			background-color: #33f;
 			color: #fff;
 		}
-		
+
     </style>
 
 
@@ -122,15 +122,15 @@
 </head>
 <body>
 <div id="header">
-    <div id="title">Najpopularniejsze strony na Wikipedii</div>
+    <div id="title">Wikipedia Top Pages</div>
     <div id="info">
-        Co to takiego? Ta strona pokazuje o czym czytają internauci. Poniżej znajduje się
-        lista artykułów Wikipedii, które są najpopularniejsze w
-        badanej godzinie wraz z liczbą odsłon.
+      What is popular on the Internet right now?
+      Below you can find the top pages on Wikipedia
+      with the number of pageviews from 1-hour window.
     </div>
     <div id="timestamp">Ostatnia aktualizacja: </div>
     <div id="langSelector">
-        Język Wikipedii:<br />
+        Wikipedia Language:<br />
     </div>
 </div>
 <div id="paper">
@@ -146,9 +146,9 @@
 <script>
 
 var langDict = [
-	{ "code": "pl", "label": "Polski", "eng_label": "Polish" },
 	{ "code": "en", "label": "English", "eng_label": "English" },
 	{ "code": "de", "label": "Deutsch", "eng_label": "German" },
+  { "code": "pl", "label": "Polski", "eng_label": "Polish" },
 	{ "code": "fr", "label": "Français", "eng_label": "French" },
 	{ "code": "es", "label": "Español", "eng_label": "Spanish" },
 	{ "code": "ru", "label": "Русский", "eng_label": "Russian" },
@@ -160,7 +160,7 @@ var langDict = [
 var langs;
 var all_data;
 var data;
-	
+
 var settings = {
 	min_pv : 0,
 	max_pv : 0,
@@ -176,21 +176,21 @@ d3.json("output.json", function(error, json) {
 	if (error) console.log(error);
 	else {
 		all_data = json;
-		
+
 		langs = langDict.filter(function(d) { return all_data.langs.indexOf(d.code) >= 0; });
-		
+
 		var span = d3
 		.select("#langSelector")
 		.selectAll("span")
 		.data(langs).enter().append("span")
 		;
-				
+
 		span.append("a")
 		.attr("id", function(d) { return "a_" + d.code; })
-		.on("click", function(d) { 
+		.on("click", function(d) {
 			d3.select("#langSelector").selectAll("a").attr("select","false");
 			d3.select(this).attr("select","true");
-			langSelected(d.code); 
+			langSelected(d.code);
 		})
 		.text(function(d) { return d.label+ " "; })
 		.attr("title", function(d) { return d.eng_label; })
@@ -198,9 +198,9 @@ d3.json("output.json", function(error, json) {
 
 		d3.select("#a_" + langs[0].code).attr("select","true");
 		langSelected(langs[0].code);
-	}	
+	}
 });
-	
+
 function visualize() {
 	settings.max_pv = d3.max(d3.values(data), function(d) { return d.pv; });
 	settings.pct_scale = d3.scale.linear().range([0, 100]).domain([0, settings.max_pv]);
@@ -211,7 +211,7 @@ function visualize() {
 		.data(data)
 		.enter()
 		.append("div")
-		.attr("class", "row")	
+		.attr("class", "row")
 	;
 
 	row.append("div")
@@ -235,7 +235,7 @@ function visualize() {
 		.duration(500)
 		.style("left", "5px")
 	;
-	
+
 	row.append("div")
 		.attr("class", "pv")
 		.style("right", "-25%")
@@ -245,12 +245,13 @@ function visualize() {
 		.style("right", "15px")
 		.text(function(d) { return d.pv; })
 	;
-	
+
+  var d = new Date(all_data.lastUpdated + " UTC");
 	d3.select("#timestamp")
-	.text("Wyniki z: " + all_data.lastUpdated)
+	.text("Results from: " + d)
 	;
 }
-	
+
 </script>
 
 </body>
